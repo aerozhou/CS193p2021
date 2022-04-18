@@ -137,3 +137,46 @@ var columns: [GridItem] =
 
 $0表示传递给Swift闭包的第一个参数
 
+## 3. Lecture 3
+
+这节课学的都是硬知识：MVVM 模型，语法。
+
+### 3.1 MVVM: Model-View-ViewModel
+
+#### Model
+
+Model 完全独立于 UI。主要是用于 Data 和 Logic，数据和逻辑。
+
+@State 这种以后在View 里创建的var 还是很少用。
+
+#### View
+
+Model 用于反映 Model。是Stateless并且Declared，Reactive。
+
+#### ViewModel
+
+将Model绑定到View中。
+
+与原来的Control有什么不同？
+
+### 3.2 数据类型
+
+#### struct
+
+
+
+#### class
+
+
+
+#### struct 和 class 的不同
+
+1. 类型不同：struct是value type，class 是引用类型；
+2. 传递方式：struct是copied，class通过pointer；
+3. struct是copy on write，class是自动引用；
+4. 编程方式：struct 函数式编程，class是面向对象编程；
+5. inheritance：strcut没有继承，class有继承；
+6. 初始化：strcut可所有var，class不可初始化var；
+7. Mutability：strcut must be explicitly stated， class 可变；
+8. strcut 还是首选；
+9. 一般的View都是struct，ViewModel是class，UIKit也是class-based；
